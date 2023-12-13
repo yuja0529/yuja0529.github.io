@@ -40,12 +40,12 @@ let blocks: string[] = ['block_1', 'block_2', 'block_3', 'block_4', 'block_5']
 }
 
 .block_4 {
-	width: 74px;
+	width: 60px;
 	height: auto;
 	transform: rotate(90deg);
 	position: absolute;
-	top: -6px;
-	left: 7px;
+	top: 11px;
+	left: 9px;
 }
 
 .game_height_box {

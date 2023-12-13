@@ -5,13 +5,17 @@ import BlockHoldview from '@/components/BlockHoldview.vue'
 </script>
 
 <template>
-	<main class="wrap_layout_container">
-		<div class="layout_container">
-			<block-holdview></block-holdview>
-			<game-board></game-board>
-			<blocks-preview></blocks-preview>
-		</div>
-	</main>
+	<div>
+		<h1>SCORE: 24,030</h1>
+		<main class="wrap_layout_container">
+			<div class="layout_container">
+				<block-holdview></block-holdview>
+				<game-board></game-board>
+				<blocks-preview></blocks-preview>
+			</div>
+		</main>
+		<h1>TETRIS</h1>
+	</div>
 </template>
 
 <style scoped>
@@ -20,5 +24,9 @@ import BlockHoldview from '@/components/BlockHoldview.vue'
 	align-items: center;
 	justify-content: center;
 	padding: 0 4px;
+}
+
+h1 {
+	text-align: center;
 }
 </style>

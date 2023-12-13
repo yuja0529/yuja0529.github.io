@@ -1,25 +1,45 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
+
+const isHide = ref(true)
+const startGameBtn = () => {
+	isHide.value = !isHide.value
+}
 </script>
 
 <template>
-	<header>
-		<h1>SCORE: 24,030</h1>
-
-		<!-- <div class="wrapper">
-			<nav>
-				<RouterLink to="/">Home</RouterLink>
-				<RouterLink to="/about">About</RouterLink>
-			</nav>
-		</div> -->
-
+	<div>
+		<div class="wrap_start_btn_show" v-if="isHide">
+			<button @click="startGameBtn" class="btn_start">START</button>
+		</div>
 		<RouterView />
-		<h1>TETRIS</h1>
-	</header>
+	</div>
 </template>
 
 <style scoped>
-h1 {
-	text-align: center;
+.wrap_start_btn_show {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.8);
+	z-index: 90;
+}
+
+.wrap_start_btn_hide {
+	display: none;
+}
+
+.btn_start {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 120px;
+	height: 40px;
+	font-size: 1.6rem;
+	background-color: #fff;
+	border: 1px solid #333;
+	line-height: 40px;
 }
 </style>
